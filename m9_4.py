@@ -18,7 +18,12 @@ s = s.lower()
 for c in s:
     if c in буквы:
         частоты[буквы.find(c)] +=1
-        
+procents = частоты
+a = sum(procents)
+for i in range(len(procents)):
+    procents[i] = procents[i]*100/a
+    print(procents[i], частоты[i])
+
 # вывели результат:
 for i in range(len(частоты)):
     print('%s - %7d' % (буквы[i], частоты[i]))
